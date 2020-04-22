@@ -24,6 +24,12 @@
   <script src="./../js/lib/p5.min.js"></script>
 
   <script type="text/javascript" src="./../js/lang.js"></script>
+  <script src="./../js/lib/audiojs/audio.min.js"></script>
+  <script>
+    audiojs.events.ready(function() {
+      audiojs.createAll();
+    });
+  </script>
   <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {
       m[i] = m[i] || function() {
@@ -66,6 +72,11 @@
       .imgDesc {
         width: 40%;
       }
+    }
+
+    .audiojs {
+      display: inline-block;
+      width: 100%;
     }
   </style>
 </head>
@@ -117,15 +128,16 @@
   </span>
   <p></p>
   <center>
-    <!-- <img src="./../img/neujitsu.png" style="width:20%" alt="neujitsu logo"> -->
+
   </center>
   <h1>
     <span class="en"><b>Lifes Trans</b>fering</span>
-    <span class="ru">Обмен жизням</span>
+    <span class="ru">Обмен жизнями</span>
   </h1>
 
  </center>
 
+ <audio src="./muz/dance.mp3" preload="auto"></audio>
  <section>
    <span class="ru">
      <h3>Вместо введения</h3>
@@ -224,25 +236,29 @@
     </p>
     <h3>Первые шаги</h3>
     <ol>
-        <li>Сейчас на секунду задумайтесь над тем, кто вам был бы интересен.</li>
-        <li>
-          Далее вы находите подходящего человека, которому также интересен обмен.
-          Можно прямо предложить этому человеку сеанс обмена (по прямой ссылке или в общении тет-а-тет).
-        </li>
-        <li>
-          Выражаете взаимный интерес; если интерес не находит отклик - продолжаете поиск.
-          Для обмена очень важен именно взаимный интерес, впрочем ситуации бывают разными.
-        </li>
-        <li>
-          Выразив общий взаимный интерес вы договариваетесь о типе сеансов и их длительности. Например, это может быть аудио-общение с трансляцией камеры
-          мобильного телефона происходящего. Возможно будет удобна трансляция монитора вместо мобильного телефона.
-        </li>
-        <li>
+      <li>Сейчас на секунду задумайтесь над тем, кто тебе был бы интересен.</li>
+      <li>
+        Далее ты находишь подходящего человека, которому также интересен обмен.
+        Можно прямо предложить этому человеку сеанс обмена (по прямой ссылке или в общении тет-а-тет).
+      </li>
+      <li>
+        Выражаете взаимный интерес; если интерес не находит отклик - продолжаете поиск.
+        Для обмена очень важен именно взаимный интерес, впрочем ситуации бывают разными.
+      </li>
+      <li>
+        Выразив общий взаимный интерес вы договариваетесь о типе сеансов и их длительности.
+        Например, это может быть аудио-общение с трансляцией камеры
+        мобильного телефона происходящего.
+        Возможно будет удобна трансляция монитора вместо мобильного телефона.
+      </li>
+      <li>
         Начинать стоит с небольшой длительности сеансов, например, 10 минут или даже 5 минут. Для полноценного обмена жизнями и
-        погружения в жизнь другого нужны глубокое принятие другого, доверие и готовность открываться. Не с каждым партнёром это
-        даётся легко и с каждым всё индивидуально. Впрочем есть и общие моменты. От сеанса к сеансы можно увеличивать время
-        сеанса, оптимальное время у каждой пары будет своё. Это не обязательно должна быть пара, вомзожно - три или квартет с
-        ведущим и ведомыми.
+        погружения в жизнь другого необходимо глубокое принятие Другого, доверие и готовность открываться.
+        Не с каждым партнёром это
+        даётся легко и с каждым всё индивидуально.
+        Впрочем есть и общие моменты. От сеанса к сеансу можно увеличивать его длительность,
+        оптимальное время у каждой пары будет своё. Впрочем не обязательно должна быть именно пара,
+        возможно - трио или квартет с ведущим и ведомыми.
       </li>
       <li>
         Два шага для закрепления интереса:
@@ -261,7 +277,7 @@
         <a href="https://t.me/joinchat/AxvncRqtEDbU1YVRZlnsmw">https://t.me/joinchat/AxvncRqtEDbU1YVRZlnsmw телеграм чат</a>. Это ИТ чат не связан с лайфтранс, но в нём о lifestrans точно можно узнать спросив @bimodaling.
       </li>
       <li>
-        Если используешь IRC то добро пожаловать на канал <b>#silkmind</b> на <u>irc.freenode.net</u>.
+        Если используешь IRC: добро пожаловать на канал <b>#silkmind</b> на <u>irc.freenode.net</u>.
       </li>
       <li>
         <b>ВАЖНО</b>. Аккуратно подбирай партнёров для обмена жизнями,
@@ -271,14 +287,23 @@
           Психологические практики и книги по психологии полезны для такого занятия и
           ещё, поначалу обмениваться жизнями стоит с теми, кто уже является близким и кому
          доверяешь. В любом случае - <b>#желаюудачи</b> и <b>#классныхсессий</b>!
+       </li>
 
-
-      </li>
+       <li> Журнал.
+         <p>
+           Подробное описание обмена жизни будет приведено в первом номере
+           <a href="https://silkmind.com/mag/">Silkmind Visionz</a>
+           в начале лета. Ждём ваших статей!
+         </p>
+         <p>
+           PS: Дизайн будет также не раньше первого дня лета.
+         </p>
+       </li>
     </ol>
    </span>
 
    <span class="en">
-     <p>Sorry for my English at the first. Nevermind.</p>
+     <p>Sorry for my English at first. Nevermind.</p>
 
      <h3>Instead of introducing</h3>
      <p>
@@ -373,7 +398,7 @@
           Maybe it's also useful to share screen.
         </li>
         <li>
-          Plz use short sessions for the first time. 10 minutes or even 5 minutes will be ok.
+          Please use short sessions for the first time. 10 minutes or even 5 minutes will be ok.
           It's very important to accept each other in full. It's good to feel each other,
           maybe to share borders, also trust and be ready for the openness.
 
@@ -409,9 +434,50 @@
         Also it's useful to read book on psychology and start with people you trust.
         Minds goes like magnets - try different and interesting. Wish you <b>#goodluck</b> and <b>#coolsession</b>-s.
       </li>
+      <li>
+        Magazine.
+        <p>
+          Full description of lifes transfering protocol will be placed
+          in <a href="https://silkmind.com/mag/">Silkmind Visionz</a> magazine at the beggining of summer.
+          You are welcome for articles!
+        </p>
+        <p>
+          PS: Design will be also in Summer.
+        </p>
+      </li>
     </ol>
    </span>
  </section>
+
+ <section>
+   <span class="ru">
+     Использованные музыкальные треки для настроения:
+     <ul>
+       <li>
+         #2Маши - Мама я танцую
+       </li>
+       <li>
+         Jl - green
+       </li>
+     </ul>
+     * с уважением к авторам и исполнителям
+   </span>
+   <span class="en">
+     Used music for the mood:
+     <ul>
+       <li>
+         #2Маши - Мама я танцую
+       </li>
+       <li>
+         Jl - green
+       </li>
+     </ul>
+     * with respect to authors, singers and recording labels
+   </span>
+
+ </section>
+
+ <audio src="./muz/Jl-green.mp3" preload="auto"></audio>
 </body>
 
 </html>
